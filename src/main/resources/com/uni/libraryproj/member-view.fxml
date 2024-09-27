@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uni.libraryproj.scene.MemberViewController">
+    <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10">
+        <VBox>
+            <HBox>
+                <Label text="Member name: "/>
+                <TextField fx:id="memberName" alignment="CENTER_RIGHT"/>
+            </HBox>
+            <HBox>
+                <Label text="Contacts: "/>
+                <TextField fx:id="memberContactInfo" alignment="CENTER_RIGHT"/>
+            </HBox>
+            <HBox>
+                <Label text="Membership Type: "/>
+                <TextField fx:id="memberMembershipType" alignment="CENTER_RIGHT"/>
+            </HBox>
+            <HBox>
+                <Label text="Book ID: "/>
+                <TextField fx:id="memberBookId" alignment="CENTER_RIGHT"/>
+            </HBox>
+            <Button fx:id="memberClear" mnemonicParsing="false" text="Clear"/>
+        </VBox>
+
+        <HBox alignment="CENTER">
+            <ButtonBar>
+                <buttons>
+                    <Button fx:id="memberAdd" mnemonicParsing="false" text="Add"/>
+                    <Button fx:id="memberUpdate" mnemonicParsing="false" text="Update"/>
+                    <Button fx:id="memberDelete" mnemonicParsing="false" text="Delete"/>
+                </buttons>
+            </ButtonBar>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <HBox>
+                <Label text="Search: "/>
+                <TextField fx:id="memberSearchField"/>
+            </HBox>
+        </HBox>
+
+        <ScrollPane prefHeight="400.0" prefWidth="800.0" vbarPolicy="ALWAYS">
+            <TableView fx:id="memberTableView" prefHeight="400.0" prefWidth="800.0" style="-fx-padding: 0;">
+                <columns>
+                    <TableColumn fx:id="memberColumnName" prefWidth="150.0" text="Name"/>
+                    <TableColumn fx:id="memberColumnContacts" prefWidth="162.0" text="Contacts"/>
+                    <TableColumn fx:id="memberColumnMembershipType" prefWidth="117.0" text="Membership_Type"/>
+                    <TableColumn fx:id="memberColumnBookId" prefWidth="117.0" text="Book_ID"/>
+                </columns>
+            </TableView>
+        </ScrollPane>
+
+    </VBox>
+</AnchorPane>

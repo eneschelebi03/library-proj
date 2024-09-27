@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.uni.libraryproj.scene.LoanViewController">
+    <VBox alignment="CENTER" prefHeight="600.0" prefWidth="800.0" spacing="10">
+        <VBox>
+            <HBox>
+                <Label text="Member ID: "/>
+                <TextField fx:id="loanMemberId" alignment="CENTER_RIGHT"/>
+            </HBox>
+            <HBox>
+                <Label text="Book ID: "/>
+                <TextField fx:id="loanBookId" alignment="CENTER_RIGHT"/>
+            </HBox>
+            <HBox>
+                <Label text="Loan Date: "/>
+                <TextField fx:id="loanDate" alignment="CENTER_RIGHT"/>
+
+            </HBox>
+            <HBox>
+                <Label text="Due Date: "/>
+                <TextField fx:id="loanDueDate" alignment="CENTER_RIGHT"/>
+
+            </HBox>
+            <Button fx:id="loanClear" mnemonicParsing="false" text="Clear"/>
+        </VBox>
+
+        <HBox alignment="CENTER">
+            <ButtonBar>
+                <buttons>
+                    <Button fx:id="loanAdd" mnemonicParsing="false" text="Add"/>
+                    <Button fx:id="loanUpdate" mnemonicParsing="false" text="Update"/>
+                    <Button fx:id="loanDelete" mnemonicParsing="false" text="Delete"/>
+                </buttons>
+            </ButtonBar>
+        </HBox>
+
+        <HBox alignment="CENTER">
+            <HBox>
+                <Label text="Search: "/>
+                <TextField fx:id="loanSearchField"/>
+            </HBox>
+        </HBox>
+
+        <ScrollPane prefHeight="400.0" prefWidth="800.0" vbarPolicy="ALWAYS">
+            <TableView fx:id="loanTableView" prefHeight="400.0" prefWidth="800.0">
+                <columns>
+                    <TableColumn fx:id="loanColumnMemberId" prefWidth="106.0" text="Member_ID"/>
+                    <TableColumn fx:id="loanColumnBookId" prefWidth="100.0" text="Book_ID"/>
+                    <TableColumn fx:id="loanColumnLoanDate" prefWidth="119.0" text="Loan_Date"/>
+                    <TableColumn fx:id="loanColumnDueDate" prefWidth="119.0" text="Due_Date"/>
+                </columns>
+            </TableView>
+        </ScrollPane>
+
+    </VBox>
+</AnchorPane>
